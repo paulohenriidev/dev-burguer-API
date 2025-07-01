@@ -20,10 +20,10 @@ class User extends Model {
         user.password_hash = await bcrypt.hash(user.password, 12);
       }
     });
-    return this;S
+    return this;
   }
-  async checkPassoword(password) {
-   return await bcrypt.compare(password, this.password_hash);
+  async checkPassword(password) {
+   return bcrypt.compare(password, this.password_hash);
   }
 }
 

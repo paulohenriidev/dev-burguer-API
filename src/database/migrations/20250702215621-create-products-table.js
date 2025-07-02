@@ -16,7 +16,7 @@ module.exports = {
       allowNull: false
     },
     price: {
-      type: Sequelize.STRING,
+      type: Sequelize.DECIMAL(10,2),
       allowNull: false
     },
     category: {
@@ -28,11 +28,11 @@ module.exports = {
       allowNull: false
     }, 
     created_at: {
-      type:Sequelize.STRING,
+      type:Sequelize.DATE,
       allowNull: false
     },
-    update_at: {
-      type:Sequelize.STRING,
+    updated_at: {
+      type:Sequelize.DATE,
       allowNull: false
     }
    });
